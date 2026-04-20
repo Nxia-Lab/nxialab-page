@@ -50,15 +50,42 @@ const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+    };
+
+    if (submitButton) submitButton.disabled = true;
     showStatus("Enviando...", "");
 
-    setTimeout(() => {
-      showStatus("Solicitud enviada con exito. Nos contactaremos pronto.", "success");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result?.error || "No se pudo enviar el mensaje.");
+      }
+
+      showStatus("Mensaje enviado con exito. Te responderemos pronto.", "success");
       contactForm.reset();
-    }, 1500);
+    } catch (error) {
+      showStatus(error.message || "No se pudo enviar el mensaje.", "error");
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }
 

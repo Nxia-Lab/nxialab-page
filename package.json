@@ -1,0 +1,12 @@
+{
+  "name": "nxia-lab-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page de nxia-lab",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^6.10.1"
+  }
+}

@@ -22,6 +22,18 @@ El proyecto está armado como una página estática con:
 
 No necesita dependencias ni instalación especial. Solo un navegador moderno.
 
+## Formulario de contacto
+
+El formulario envía mensajes reales a Gmail a través de una función de Vercel.
+
+Variables de entorno requeridas en Vercel:
+
+- `GMAIL_USER`: tu cuenta de Gmail
+- `GMAIL_APP_PASSWORD`: contraseña de aplicación de Gmail
+- `CONTACT_TO_EMAIL`: destino de los mensajes, por ejemplo `nxialab@gmail.com`
+
+Para que el envío funcione, Gmail debe tener activada la verificación en dos pasos y una contraseña de aplicación creada para este sitio.
+
 ## Ejecutar en local
 
 Podés abrir el archivo `index.html` directamente o servir la carpeta con un servidor local.
