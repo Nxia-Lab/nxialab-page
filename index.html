@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nxia-lab | IA, Datos y Automatizacion para lo que necesitas</title>
-  <meta name="description" content="nxia-lab te ayuda a crear soluciones con IA, automatizacion y datos para trabajo, negocios o proyectos personales." />
+  <title>NXIA-lab | Inteligencia Operativa y Software a Medida con IA</title>
+  <meta name="description" content="Automatizamos la toma de decisiones, optimizamos el stock e integramos Inteligencia Artificial a la medida de tu empresa para transformar tus datos en eficiencia operativa." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- Filtro de Ruido SVG para Textura de Fondo -->
+  <svg style="display: none;" aria-hidden="true">
+    <filter id="noise-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </svg>
 
   <header class="site-header">
     <div class="container nav-wrap">
@@ -21,7 +30,9 @@
 
       <nav class="main-nav" aria-label="Navegacion principal">
         <a href="#servicios">Servicios</a>
-        <a href="#casos">Casos de Exito</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#casos">Casos de Uso</a>
+        <a href="#preguntas">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -36,42 +47,69 @@
   </header>
 
   <main>
-    <section class="hero container" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow">IA, Datos y Automatizacion</p>
-        <h1>Te ayudamos a resolver ideas y problemas reales con IA y datos</h1>
-        <p class="subtitle">
-          Si tienes una idea, una tarea que te quita tiempo o datos que no estas aprovechando bien, podemos ayudarte a convertir eso en una solucion simple y util.
-        </p>
-        <div class="hero-cta-row">
-          <span class="trust-note">Para negocios, profesionales y personas &middot; Trabajo cercano y 100% digital</span>
+    <div class="hero-scroll-story" id="inicio">
+      <!-- Sección 1: Intro (Oscura) -->
+      <section class="story-section bg-dark-1">
+        <div class="story-grid-bg"></div>
+        <div class="story-content">
+          <h1 class="story-title story-title-gradient">
+            Sabemos exactamente lo que buscas <br> para tu negocio
+          </h1>
         </div>
-      </div>
+      </section>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-image-container">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
-            alt="Dashboard de datos"
-            class="hero-img"
-            fetchpriority="high"
-          >
-          <div class="floating-badge">
-            <span class="pulse"></span>
-            IA Activa
+      <!-- Sección 2: El Hero Principal (Clara) -->
+      <section class="story-section bg-light-2 rounded-top">
+        <div class="story-grid-bg"></div>
+        <div class="story-content container">
+          <div class="hero-grid">
+            <!-- Columna Izquierda: Información de Marca -->
+            <div class="hero-copy">
+              <p class="eyebrow">Inteligencia Operativa</p>
+              <h1>Conectamos tus datos comerciales</h1>
+              <p class="subtitle">
+                Vinculamos tus ventas, stock y finanzas en tiempo real. La IA actúa como el nexo estratégico que unifica tu realidad operativa para automatizar decisiones y predecir faltantes con absoluta privacidad.
+              </p>
+              <div class="hero-cta-row">
+                <a href="#contacto" class="btn btn-hero">Solicitar Demo Gratis</a>
+                <span class="trust-note">Para empresas, comercios y operaciones &middot; MVPs funcionales y soporte mensual</span>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Mockup del Dashboard -->
+            <div class="hero-visual">
+              <div class="story-image-frame">
+                <img src="hero_dashboard_dark.png" alt="Inteligencia Operativa Dashboard">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="services container" id="servicios">
+      <!-- Sección 3: Conclusión/Privacidad (Oscura) -->
+      <section class="story-section bg-dark-3">
+        <div class="story-grid-bg"></div>
+        <div class="story-content">
+          <h1 class="story-title">
+            Privacidad y optimización a medida
+          </h1>
+          <p class="subtitle" style="margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+            Tus datos permanecen seguros. Desliza para explorar el simulador interactivo y ver cómo automatizamos tus procesos en tiempo real.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem;">
+            <a href="#simulador" class="btn" style="background: var(--primary); color: #050814; font-weight: 700; border-radius: 50px;">Explorar Simulador ⚡</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="services container reveal" id="servicios">
       <div class="section-head">
         <p class="eyebrow">Servicios</p>
         <h2>Formas en las que podemos ayudarte a trabajar mejor con tecnologia, datos e IA</h2>
       </div>
 
       <div class="service-grid">
-        <article class="service-card">
+        <article class="service-card spotlight-card">
           <div class="icon-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3a4 4 0 0 1 4 4v1.2a4 4 0 0 1 2.2 3.6v2.2a2 2 0 0 1-2 2h-.6a3.4 3.4 0 0 1-7.2 0H8a2 2 0 0 1-2-2v-2.2A4 4 0 0 1 8 8.2V7a4 4 0 0 1 4-4Zm-1.7 13a1.7 1.7 0 1 0 3.4 0h-3.4Z"/>
@@ -81,7 +119,7 @@
           <p>Te ayudamos a ordenar tu informacion en tableros claros y faciles de entender para que puedas ver lo importante de un vistazo.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card spotlight-card">
           <div class="icon-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 18h4v2H2v-6h2v4Zm6-6h4v8h-4v-8Zm6-8h4v16h-4V4Zm-8 7 2-2 2 2-2 2-2-2Z"/>
@@ -91,7 +129,7 @@
           <p>Si repites tareas todos los dias, podemos automatizarlas para que ahorres tiempo y trabajes con mas tranquilidad.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card spotlight-card">
           <div class="icon-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 18v-2.2c0-1.2.9-2.1 2.1-2.1h3.8V10H5.8C4.2 10 3 8.8 3 7.2V5h2v2.2c0 .5.3.8.8.8h3.1c1.6 0 2.8 1.2 2.8 2.8v2.9h3.2c.4 0 .8-.3.8-.8V11h2v2.9c0 1.6-1.2 2.8-2.8 2.8h-3.2V19h-2v-2.3H5.1A2.1 2.1 0 0 0 3 18Z"/>
@@ -101,7 +139,7 @@
           <p>Cuando necesitas entender mejor tus datos, podemos ayudarte a encontrar patrones y anticipar escenarios con mas claridad.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card spotlight-card">
           <div class="icon-wrap">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2 3 6.5V13c0 5 3.5 8.8 9 10 5.5-1.2 9-5 9-10V6.5L12 2Zm-1 14-3-3 1.4-1.4L11 13.2l3.6-3.6L16 11l-5 5Z"/>
@@ -113,55 +151,171 @@
       </div>
     </section>
 
-    <section class="portfolio container" id="casos">
+    <section class="simulator container reveal" id="simulador">
+      <div class="section-head">
+        <p class="eyebrow">Simulador Interactivo</p>
+        <h2>Visualiza tu automatización en tiempo real</h2>
+        <p class="subtitle">Selecciona una plantilla o describe tu propio proceso para ver cómo la Inteligencia Artificial y las herramientas de automatización resuelven tu tarea.</p>
+      </div>
+
+      <div class="simulator-card">
+        <div class="simulator-presets" id="presets-container">
+          <div class="sliding-pill-indicator" id="sliding-pill"></div>
+          <button class="preset-btn active" data-preset="emails">Clasificar Correos</button>
+          <button class="preset-btn" data-preset="pdf">Extraer de PDFs</button>
+          <button class="preset-btn" data-preset="reportes">Reportes Mensuales</button>
+        </div>
+
+        <div class="simulator-input-group">
+          <input type="text" id="simulator-custom-input" placeholder="O escribe tu proceso aquí (ej: Cuando llega un WhatsApp, guardarlo en Google Sheets y enviar email)...">
+          <button id="simulator-run-btn" class="btn">Procesar Idea</button>
+        </div>
+
+        <div class="simulator-flow" id="simulator-flow-container">
+          <!-- Se cargará dinámicamente con JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio container reveal" id="casos">
       <div class="section-head">
         <p class="eyebrow">Casos de uso</p>
         <h2>Algunos ejemplos de como una buena herramienta puede hacerte la vida mas facil</h2>
       </div>
 
       <div class="portfolio-grid">
-        <article class="case-card">
+        <article class="case-card spotlight-card">
           <header class="case-card-header">
             <h3>Inventario Inteligente</h3>
             <span>Para ordenar stock, seguir movimientos y tener mas control del dia a dia</span>
+            <div class="case-link-wrapper">
+              <span class="case-link">Ver caso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </header>
           <div class="case-image">
-            <img src="https://images.unsplash.com/photo-1586769852044-692d6e392394?auto=format&fit=crop&q=80&w=800" alt="Gestion de inventarios" loading="lazy">
+            <img src="inventario_inteligente.png" alt="Gestión de inventarios inteligente" loading="lazy">
           </div>
         </article>
 
-        <article class="case-card">
+        <article class="case-card spotlight-card">
           <header class="case-card-header">
             <h3>Analitica Financiera</h3>
             <span>Para entender numeros, ingresos y decisiones importantes con mas claridad</span>
+            <div class="case-link-wrapper">
+              <span class="case-link">Ver caso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </header>
           <div class="case-image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Analisis financiero" loading="lazy">
+            <img src="analitica_financiera.png" alt="Analítica financiera y gráficos" loading="lazy">
           </div>
         </article>
       </div>
     </section>
 
-    <section class="contact container" id="contacto">
+    <section class="faq container reveal" id="preguntas">
+      <div class="section-head">
+        <p class="eyebrow">Preguntas Frecuentes</p>
+        <h2>Todo lo que necesitas saber</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Necesito tener conocimientos técnicos para empezar?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-h" x1="5" y1="12" x2="19" y2="12"></line>
+              <line class="line-v" x1="12" y1="5" x2="12" y2="19"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>No, en absoluto. Nosotros nos encargamos de todo el desarrollo técnico, la integración y las pruebas. Te entregamos la solución lista para usar y te explicamos su funcionamiento de forma muy sencilla.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cuánto tiempo toma implementar un proyecto de automatización o IA?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-h" x1="5" y1="12" x2="19" y2="12"></line>
+              <line class="line-v" x1="12" y1="5" x2="12" y2="19"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Los proyectos más simples (como clasificar correos o conectar dos herramientas) suelen tomar entre 1 y 2 semanas. Desarrollos más avanzados con dashboards y modelos predictivos personalizados pueden tomar de 3 a 5 semanas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo aseguran la privacidad y seguridad de mis datos?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-h" x1="5" y1="12" x2="19" y2="12"></line>
+              <line class="line-v" x1="12" y1="5" x2="12" y2="19"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>La seguridad es nuestra prioridad absoluta. Trabajamos con conexiones cifradas y APIs oficiales de proveedores de confianza (como OpenAI y Google Cloud). Además, firmamos acuerdos de confidencialidad (NDA) antes de acceder a cualquier información de tu negocio.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué tecnologías y herramientas utilizan habitualmente?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-h" x1="5" y1="12" x2="19" y2="12"></line>
+              <line class="line-v" x1="12" y1="5" x2="12" y2="19"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Utilizamos Python y Node.js para integraciones a medida, APIs de OpenAI y Anthropic para inteligencia artificial, Make (Integromat) para automatizaciones visuales ágiles, y bases de datos o herramientas no-code como Notion y Google Sheets para almacenar y visualizar información.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Tengo soporte o asistencia después de finalizado el proyecto?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line class="line-h" x1="5" y1="12" x2="19" y2="12"></line>
+              <line class="line-v" x1="12" y1="5" x2="12" y2="19"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Sí. Todos nuestros proyectos incluyen un período de soporte y garantía de 30 días sin costo adicional para corregir cualquier detalle. También ofrecemos planes de mantenimiento mensual si necesitas soporte constante o actualizaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact container reveal" id="contacto">
       <div class="contact-panel">
         <div class="contact-content">
           <h2>Cuentanos lo que necesitas y vemos juntos como hacerlo realidad</h2>
           <p>No hace falta que llegues con todo resuelto. Si tienes una idea, un problema o una tarea que quieres mejorar, te ayudamos a darle forma.</p>
         </div>
         <form id="contact-form" class="contact-form">
-          <div class="form-group">
+          <div class="form-group floating-label-group">
+            <input type="text" id="name" name="name" placeholder=" " required>
             <label for="name">Nombre Completo</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
           </div>
-          <div class="form-group">
+          <div class="form-group floating-label-group">
+            <input type="email" id="email" name="email" placeholder=" " required>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
           </div>
-          <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" placeholder="Como podemos ayudarte?" required></textarea>
+          <div class="form-group floating-label-group">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Mensaje (Cuéntanos tu idea o consulta)</label>
           </div>
-          <button type="submit" class="btn btn-lg btn-block">Enviar Solicitud</button>
+          <button type="submit" class="btn btn-lg btn-block btn-gradient-border">Enviar Solicitud</button>
           <div id="form-status" class="form-status" aria-live="polite"></div>
         </form>
       </div>
@@ -174,20 +328,17 @@
         <a href="#" class="logo" aria-label="nxia-lab inicio">
           <span class="logo-n">N</span><span class="logo-x">X</span><span class="logo-ia">IA</span><span class="logo-lab">-lab</span>
         </a>
-        <p class="footer-desc">Acompanamos a personas, profesionales y negocios a crear soluciones utiles con IA, datos y automatizacion.</p>
-        <div class="social-links">
-          <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-          <a href="#" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
-          <a href="#" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-        </div>
+        <p class="footer-desc">Acompañamos a personas, profesionales y negocios a crear soluciones utiles con IA, datos y automatizacion.</p>
       </div>
 
       <div class="footer-nav">
-        <h4>Navegacion</h4>
+        <h4>Navegación</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#casos">Casos de Exito</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+          <li><a href="#casos">Casos de Uso</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -207,6 +358,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
