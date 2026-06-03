@@ -32,7 +32,7 @@ if (typeof Lenis !== "undefined") {
           document.body.classList.remove("no-scroll");
         }
 
-        lenis.scrollTo(targetEl, { offset: -100, duration: 1.2 });
+        lenis.scrollTo(targetEl, { offset: -30, duration: 1.2 });
       }
     });
   });
